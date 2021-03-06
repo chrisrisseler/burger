@@ -43,11 +43,43 @@ const orm = {
             callback(result);
         });
     },
-    insertOne() {
+    insertOne(table, columns, values, callback) {
+        let queryString = `INSERT INTO ${table}`
 
+        queryString += ' (';
+        queryString += columns.toString();
+        queryString += ') ';
+        queryString += 'VALUES (';
+        queryString += printQuestionMarks(values.length);
+        queryString += ') ';
+
+        console.log(queryString);
+
+        connection.query(queryString, values, (err, result) => {
+            if (err) throw err;
+
+            callback(result);
+        });
     },
-    updateOne() {
+    updateOne(table, objectColumnValues, condition, callback) {
+        let queryString = `UPDATE ${table}`;
 
+        queryString += ' SET ';
+        queryString += objToSql(objectColumnValues);
+        queryString += ' WHERE ';
+        queryString += condition;
+
+        console.log(queryString);
+
+        connection.query(queryString, (err, result) => {
+
+            if (err) throw err;
+
+
+            callback(result);
+
+        });
     }
-
 }
+
+module.exports = orm;
