@@ -11,7 +11,6 @@ const burger = {
     updateOne(objectColumnValues, condition, callback) {
         orm.updateOne('burgers', objectColumnValues, condition, (response) => callback(response))
     }
-
 };
 
 module.exports = burger;
