@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(255, 255, 147);
+}
+
+h1{
+    font-family: 'Fascinate', cursive;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(158, 53, 53);
+}
+
+#notEaten{
+ margin-left: 10px;
+ font-family: 'Architects Daughter', cursive;
+}
+
+#eaten{
+    font-family: 'Architects Daughter', cursive;
+}
+
+#makeBurger{
+    margin-left: 10px;
+    margin-top:20px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+li{
+    padding-bottom: 5px;
+}
