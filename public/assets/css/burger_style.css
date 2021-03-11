@@ -31,11 +31,12 @@ li{
 img{
     height: 100px;
     width: auto;
-    margin-left: 45%;
+    margin:0 auto;
     margin-top: 5px;
 }
 
 #imgWrap{
     width: 100%;
-    justify-content: center;
+    display:flex;
+    align-items: center;
 }
