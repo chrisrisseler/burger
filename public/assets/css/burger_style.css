@@ -27,3 +27,15 @@ h1{
 li{
     padding-bottom: 5px;
 }
+
+img{
+    height: 100px;
+    width: auto;
+    margin-left: 45%;
+    margin-top: 5px;
+}
+
+#imgWrap{
+    width: 100%;
+    justify-content: center;
+}
